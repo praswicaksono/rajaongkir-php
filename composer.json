@@ -1,0 +1,21 @@
+{
+    "name": "jowy/rajaongkir-php",
+    "description": "Rajaongkir PHP Api Client",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Prasetyo Wicaksono",
+            "email": "pras@openmailbox.org"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "doctrine/collections" : "^1.3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jowy\\RajaOngkir\\": "src"
+        }
+    }
+}

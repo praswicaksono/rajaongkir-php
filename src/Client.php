@@ -7,6 +7,7 @@ use Jowy\RajaOngkir\Executor\ExecutorInterface;
 use Jowy\RajaOngkir\Services\CityService;
 use Jowy\RajaOngkir\Services\CostService;
 use Jowy\RajaOngkir\Services\Edition;
+use Jowy\RajaOngkir\Services\ProvinceService;
 use Jowy\RajaOngkir\Services\ServiceInterface;
 
 /**
@@ -25,7 +26,8 @@ class Client
      */
     private $defaultServices = [
         CityService::class,
-        CostService::class
+        CostService::class,
+        ProvinceService::class
     ];
 
     /**

@@ -27,6 +27,11 @@ class CityService implements ServiceInterface
     private $edition;
 
     /**
+     * @var string
+     */
+    private $endpoint = 'city';
+
+    /**
      * @var ArrayCollection
      */
     private $cities;

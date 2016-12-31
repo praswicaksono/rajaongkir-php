@@ -64,10 +64,14 @@ class CurlExecutor implements ExecutorInterface
 
         curl_close($curl);
 
-        if (!$err) {
-            return json_decode($response, true);
+        if ($err) {
+            throw new \DomainException("Curl error #{$err}");
         }
 
-        throw new \DomainException("Curl error #{$err}");
+        if ($response['rajaongkir']['status']['code'] !== 200) {
+            throw new \DomainException($response['rajaongkir']['status']['description']);
+        }
+
+        return json_decode($response, true);
     }
 }
